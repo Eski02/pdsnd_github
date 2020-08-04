@@ -48,7 +48,7 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
-    # load in city
+    # load in city, next time use less lowers and just do the results
     if city.lower() == "chicago":
         df = pd.read_csv("chicago.csv")
     elif city.lower() == "new york city":
