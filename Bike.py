@@ -21,7 +21,7 @@ def get_filters():
     print('Which city would you like to analyze? Please choose from Chicago, New York City, or Washington.')
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city = input("Please type the city's name that you would like to analyze: ")
-    while city.lower() != "new york city" and city.lower() != "washington" and city.lower() != "chicago": 
+    while city.lower() != "new york city" and city.lower() != "washington" and city.lower() != "chicago":
         city = input('Please try again and enter a valid city: ')
 
     # get user input for month (all, january, february, ... , june)
@@ -58,7 +58,7 @@ def load_data(city, month, day):
     else:
         print ('error: did not load correct df')
 
-    #convert to times 
+    #convert to times
     df["Start Time"] = pd.to_datetime(df["Start Time"])
     df["End Time"] = pd.to_datetime(df["End Time"])
 
@@ -72,14 +72,14 @@ def load_data(city, month, day):
         df = df.loc[df["Start Time"].dt.month==month_num]
     else:
         print('month error')
-    #load in day 
+    #load in day
     if day.lower() == 'all':
         df = df
     elif day.lower() in valid_days:
         day_key = {'monday': 0, 'tuesday': 1, 'wednesday': 2, 'thursday': 3, 'friday': 4, 'saturday':5, 'sunday': 6}
         day_num = int(day_key[day])
         df = df.loc[df["Start Time"].dt.dayofweek==day_num]
-    else: 
+    else:
         print('error day')
     # ask user if they want to see results - need a loop to keep going if the user enters they want to see more - TODO
     print("Do you want to see the first five lines of the results? Please type yes or no: ")
@@ -153,7 +153,7 @@ def station_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
+    #include warning about Washingon's lack of data
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
 
@@ -192,20 +192,20 @@ def user_stats(df):
         print("No Gender Data Avalible")
 
     # Display earliest, most recent, and most common year of birth
-    # earliest 
+    # earliest
     if 'Birth Year' in df:
         earliest_year = int(df['Birth Year'].min())
         print('the earliest year is: ', earliest_year)
     else:
         print("No Birth Year Data Avalible")
-    # most recent 
+    # most recent
     if 'Birth Year' in df:
         most_recent = int(df.dropna()['Birth Year'].tail(1))
         print('the most recent year is: ', most_recent)
     else:
         print("No birth year data avalible")
-    # most common 
-    if 'Birth Year' in df:    
+    # most common
+    if 'Birth Year' in df:
         most_common_birth = int(df['Birth Year'].mode())
         print('the most common birth year is: ', most_common_birth)
     else:
