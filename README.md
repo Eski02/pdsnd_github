@@ -17,3 +17,5 @@ washington.csv
 ### Credits
 Thank you to the wonderful people on stack overflow. They greatly helped me find the information I needed to complete the second project. Their work cited will be included in a later commit
 
+# panda's information
+https://pandas.pydata.org/pandas-docs/stable/getting_started/intro_tutorials/09_timeseries.html
