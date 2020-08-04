@@ -198,7 +198,7 @@ def user_stats(df):
         print('the earliest year is: ', earliest_year)
     else:
         print("No Birth Year Data Avalible")
-    # most recent
+    # find the most recent year
     if 'Birth Year' in df:
         most_recent = int(df.dropna()['Birth Year'].tail(1))
         print('the most recent year is: ', most_recent)
