@@ -19,3 +19,8 @@ Thank you to the wonderful people on stack overflow. They greatly helped me find
 
 # panda's information
 https://pandas.pydata.org/pandas-docs/stable/getting_started/intro_tutorials/09_timeseries.html
+
+# stack overflow sources to help with bike project
+https://stackoverflow.com/questions/38309729/count-unique-values-with-pandas-per-groups
+https://stackoverflow.com/questions/45685254/q-pandas-how-to-efficiently-assign-unique-id-to-individuals-with-multiple-ent
+https://stackoverflow.com/questions/17071871/how-to-select-rows-from-a-dataframe-based-on-column-values
